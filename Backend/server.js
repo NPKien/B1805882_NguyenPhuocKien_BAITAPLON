@@ -19,8 +19,7 @@ const nxbs = require('./routes/nxbs');
     
 app.use(cors());
 app.use(bodyParser.json());
-
-// Sử dụng các routes tương ứng
+//Use routes
 app.use('/register', Register);
 app.use('/', Login);
 app.use('/', addbook);

@@ -1,6 +1,6 @@
 const {Nhaxuatban} = require('../models/index');
 
-// Xem tất cả sách
+
 exports.getAllNxb = async (req, res) => {
   try {
     const nxbs = await Nhaxuatban.find();
@@ -10,7 +10,6 @@ exports.getAllNxb = async (req, res) => {
   }
 };
 
-// Xem một sách cụ thể
 exports.getnxbId = async (req, res) => {
   try {
     const nxb = await Nhaxuatban.findById(req.params.id);
@@ -20,7 +19,7 @@ exports.getnxbId = async (req, res) => {
   }
 };
 
-// Sửa thông tin sách
+
 exports.updatenxb = async (req, res) => {
   try {
     const updatednxb = await Nhaxuatban.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -30,7 +29,7 @@ exports.updatenxb = async (req, res) => {
   }
 };
 
-// Xóa sách
+
 exports.deletenxb = async (req, res) => {
   try {
     await Nhaxuatban.findByIdAndDelete(req.params.id);
@@ -40,9 +39,9 @@ exports.deletenxb = async (req, res) => {
   }
 };
 
-// Tìm sách theo tên
+
 exports.searchnxbByName = async (req, res) => {
-  const searchQuery = req.query.name; // Lấy tên sách từ query string
+  const searchQuery = req.query.name; 
 
   try {
     const nxbs = await Nhaxuatban.find({ TENNXB: { $regex: new RegExp(searchQuery, 'i') } });

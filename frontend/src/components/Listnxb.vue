@@ -24,7 +24,7 @@
 
     <ul class="publisher-list">
       <li v-for="publisher in publishers" :key="publisher._id" class="publisher-item">
-        <p class="publisher-info"> <span class="publisher-name">{{ publisher.TENNXB }}</span> <span class="address">Địa chỉ: {{ publisher.DIACHI }}</span> </p>
+        <p class="publisher-info"> <span class="publisher-name">{{ publisher.MANXB }}. </span> <span class="publisher-name">{{ publisher.TENNXB }}</span> <span class="address">Địa chỉ: {{ publisher.DIACHI }}</span> </p>
         <button @click="deletePublisher(publisher._id)" class="delete-button">Xóa</button>
         <router-link :to="'/editnxb/' + publisher._id" class="edit-link">Chỉnh sửa</router-link>
       </li>

@@ -43,7 +43,7 @@ const routes = [
     component: Listsach
   },
   {
-    path: '/edit/:id', // Đường dẫn cho trang chỉnh sửa sách
+    path: '/edit/:id', 
     name: 'Edit',
     component: Edit
   },
@@ -53,12 +53,12 @@ const routes = [
     component: Listnxb
   },
   {
-    path: '/editnxb/:id', // Đường dẫn cho trang chỉnh sửa sách
+    path: '/editnxb/:id', 
     name: 'Editnxb',
     component: Editnxb
   },
   {
-    path: '/detail/:id', // Đường dẫn cho trang chỉnh sửa sách
+    path: '/detail/:id', 
     name: 'detailbook',
     component: Detailbook
   },

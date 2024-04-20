@@ -1,6 +1,5 @@
 const {Sach} = require('../models/index');
 
-// Xem tất cả sách
 exports.getAllBooks = async (req, res) => {
   try {
     const books = await Sach.find();
@@ -10,7 +9,6 @@ exports.getAllBooks = async (req, res) => {
   }
 };
 
-// Xem một sách cụ thể
 exports.getBookById = async (req, res) => {
   try {
     const book = await Sach.findById(req.params.id);
@@ -20,7 +18,6 @@ exports.getBookById = async (req, res) => {
   }
 };
 
-// Sửa thông tin sách
 exports.updateBook = async (req, res) => {
   try {
     const updatedBook = await Sach.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -30,7 +27,6 @@ exports.updateBook = async (req, res) => {
   }
 };
 
-// Xóa sách
 exports.deleteBook = async (req, res) => {
   try {
     await Sach.findByIdAndDelete(req.params.id);
@@ -40,7 +36,7 @@ exports.deleteBook = async (req, res) => {
   }
 };
 
-// Tìm sách theo tên
+
 exports.searchBookByName = async (req, res) => {
   const searchQuery = req.query.name; // Lấy tên sách từ query string
 

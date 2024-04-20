@@ -29,13 +29,11 @@ export default {
   methods: {
     async addNXB() {
       try {
-        // Gửi dữ liệu tới controller
         await axios.post('http://localhost:3000/nxb', {
           TENNXB: this.TENNXB,
           DIACHI: this.DIACHI
         });
         alert('Thêm NXB thành công');
-        // Sau khi thêm NXB thành công, có thể thực hiện các hành động khác tại đây
         this.TENNXB = '';
         this.DIACHI = '';
       } catch (error) {

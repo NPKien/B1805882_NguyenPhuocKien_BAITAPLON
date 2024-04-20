@@ -49,7 +49,7 @@ export default {
   methods: {
     async addSach() {
       try {
-        // Gửi dữ liệu tới controller
+
         await axios.post('http://localhost:3000/sach', {
           TENSACH: this.TENSACH,
           DONGIA: this.DONGIA,
@@ -59,7 +59,7 @@ export default {
           TACGIA: this.TACGIA
         });
         alert('Thêm sách thành công');
-        // Sau khi thêm sách thành công, có thể thực hiện các hành động khác tại đây
+
         this.TENSACH = '';
         this.DONGIA = '';
         this.SOQUYEN = '';
